@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateQuestion(indexIncrement: Int) {
-        currentIndex = (currentIndex + indexIncrement) % questionBank.size
+        currentIndex = (currentIndex + indexIncrement + questionBank.size) % questionBank.size
         val questionTextResId = questionBank[currentIndex].textResId
         binding.questionTextView.setText(questionTextResId)
     }
